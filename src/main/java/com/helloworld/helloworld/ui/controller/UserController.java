@@ -34,9 +34,6 @@ public class UserController {
                 })
     public ResponseEntity<UserRest> getUser(@PathVariable String userId)
     {
-        if (true) {
-            throw new UserServiceException("A user Service Exception is thromn");
-        }
 
         if (users.containsKey(userId)) {
             return new ResponseEntity<>(users.get(userId), HttpStatus.OK);
